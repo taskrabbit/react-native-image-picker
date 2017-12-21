@@ -637,6 +637,10 @@ public class ImagePickerModule extends ReactContextBaseJavaModule
 
         if (activity instanceof ReactActivity)
         {
+          System.out.println(PERMISSIONS[0]);
+          System.out.println(PERMISSIONS[1]);
+          System.out.println(requestCode);
+          System.out.println(listener);
           ((ReactActivity) activity).requestPermissions(PERMISSIONS, requestCode, listener);
         }
         else if (activity instanceof OnImagePickerPermissionsCallback)
